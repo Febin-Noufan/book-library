@@ -31,14 +31,18 @@ This project is a Flutter application that displays information about books and 
 
 
 
-   
-### Tips for Customizing the README
 
-- **Update the Base URL**: Make sure to replace `https://api.example.com` with the actual base URL of your REST API.
-- **Screenshots**: Add images or screenshots of your application to help users understand its design and functionality better.
-- **Figma and API Links**: Provide direct links to the Figma design and API documentation if available.
-- **Additional Features**: If you have any additional functionalities or features not covered in the template, be sure to include them.
-- **Format**: Use proper Markdown syntax to ensure the formatting looks clean and organized.
 
-This template provides a solid foundation for documenting your Flutter application, making it easier for others to understand and use your project. Adjust it as necessary to fit your specific application and requirements!
+- **Update the Base URL**: https://assessment.eltglobal.in/.
+- **Screenshots**: ![WhatsApp Image 2024-10-19 at 18 41 40_7ff091b0](https://github.com/user-attachments/assets/80d1bdeb-2ed8-4fef-8777-f19e85612227)
+- ![WhatsApp Image 2024-10-19 at 18 41 40_664035d2](https://github.com/user-attachments/assets/74927a58-1682-44b5-a67f-c43769a84a0f)
+- ![WhatsApp Image 2024-10-19 at 18 41 41_9dac12df](https://github.com/user-attachments/assets/f9965dbd-f5cc-49a7-ab29-608df8fe959f)
+![WhatsApp Image 2024-10-19 at 18 41 41_50b7441e](https://github.com/user-attachments/assets/1b2e4da5-f9f5-4427-a271-ea119aaa52ac)
+
+
+
+
+
+
+
 
