@@ -20,15 +20,15 @@ final GoRouter _router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => SplashScreen(),
+      builder: (context, state) => const SplashScreen(),
     ),
     GoRoute(
       path: '/home',
-      builder: (context, state) => CustomBottomNavigationBar(), // Your bottom navigation bar
+      builder: (context, state) => const CustomBottomNavigationBar(),
     ),
     GoRoute(
       path: '/bookAdd',
-      builder: (context, state) => AddBookPage(), // Your bottom navigation bar
+      builder: (context, state) => AddBookPage(), 
     ),
     GoRoute(
       path: '/details',

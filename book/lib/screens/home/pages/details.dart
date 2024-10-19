@@ -15,7 +15,7 @@ import 'package:shimmer/shimmer.dart';
 class BookDetailScreen extends StatelessWidget {
   final Book book;
 
-  const BookDetailScreen({super.key, required this.book}); // Accept the book
+  const BookDetailScreen({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {
@@ -43,18 +43,18 @@ class BookDetailScreen extends StatelessWidget {
                     actions: [
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).pop(); // Close the dialog
+                          Navigator.of(context).pop(); 
                         },
                         child: const Text('Cancel'),
                       ),
                       TextButton(
                         onPressed: () {
-                          // Trigger the delete event
+                         
                           context
                               .read<BookEditBloc>()
                               .add(DeleteBookEvent(id: book.id));
-                          Navigator.of(context).pop(); // Close the dialog
-                          Navigator.of(context).pop(); // Close the dialog
+                          Navigator.of(context).pop(); 
+                          Navigator.of(context).pop(); 
                         },
                         child: const Text('Delete'),
                       ),
@@ -88,7 +88,7 @@ class BookDetailScreen extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: Image.network(
-                        book.coverPictureURL, // Use the book's cover image
+                        book.coverPictureURL, 
                         width: 171,
                         height: 260,
                         fit: BoxFit.cover,
@@ -124,13 +124,13 @@ class BookDetailScreen extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(4.0),
                                   ),
                                 ),
-                              ); // Show loading indicator
+                              );
                             } else if (state is AuthorDetealError) {
                               return Text('Error: ${state.message}');
                             } else if (state is AuthorDetealLoaded) {
                               final author = state.author;
                               return Text(
-                                'by ${author.name}', // Use author's name
+                                'by ${author.name}', 
                                 style: const TextStyle(
                                     fontSize: 16, color: Colors.grey),
                               );
@@ -142,7 +142,7 @@ class BookDetailScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Published date: ${formatDate(book.publishedDate)}', // Use published date
+                        'Published date: ${formatDate(book.publishedDate)}', 
                         style: const TextStyle(
                             fontSize: 14,
                             color: Color.fromARGB(255, 96, 95, 95)),
@@ -167,7 +167,7 @@ class BookDetailScreen extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.2),
                   spreadRadius: 2,
                   blurRadius: 5,
-                  offset: const Offset(0, -1), // changes position of shadow
+                  offset: const Offset(0, -1), 
                 ),
               ],
             ),
@@ -175,7 +175,7 @@ class BookDetailScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '₹ ${book.price}', // Use book's price
+                  '₹ ${book.price}', 
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -276,12 +276,12 @@ class BookDetailScreen extends StatelessWidget {
                           SnackBar(content: Text(state.message)),
                         );
                       } else if (state is BookDeleteSuccess) {
-                        Navigator.pop(context); // Close the bottom sheet
+                        Navigator.pop(context); 
                       }
                     },
                     child: ElevatedButton(
                       onPressed: () {
-                        // Trigger the update event
+                    
                         context.read<BookEditBloc>().add(UpdateBookEvent(
                               id: book.id,
                               title: titleController.text,

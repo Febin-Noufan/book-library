@@ -40,7 +40,7 @@ class AddBookPage extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Book added successfully')),
               );
-              Navigator.pop(context); // Optionally navigate back
+              Navigator.pop(context); 
             } else if (state is AddBookError) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(content: Text('Error: ${state.message}')),

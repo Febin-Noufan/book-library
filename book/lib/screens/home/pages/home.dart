@@ -1,8 +1,6 @@
 import 'package:book/controller/data/books/book_bloc.dart';
-
 import 'package:book/controller/data/books/book_event.dart';
 import 'package:book/controller/data/books/book_state.dart';
-import 'package:book/screens/home/pages/book_add.dart';
 import 'package:book/screens/home/widget/book_card.dart';
 import 'package:book/screens/home/widget/home_shimmer.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +15,7 @@ class HomePage extends StatelessWidget {
     final bookBloc = BlocProvider.of<BookBloc>(context);
     bookBloc.add(FetchBooks());
 
-    // TextEditingController to manage the search input
+    
     final TextEditingController searchController = TextEditingController();
 
     return Scaffold(
@@ -47,7 +45,7 @@ class HomePage extends StatelessWidget {
                 child: TextField(
                   controller: searchController,
                   onChanged: (query) {
-                    // Add the search event on text change
+                
                     bookBloc.add(SearchBooks(query: query));
                   },
                   decoration: InputDecoration(
@@ -125,13 +123,10 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           context.push('/bookAdd');
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => AddBookPage()),
-          // );
+     
         },
-        backgroundColor: Colors.black, // Set the color to black
-        child: Icon(Icons.add), // Center the icon
+        backgroundColor: Colors.black,
+        child: const Icon(Icons.add),
       ),
     );
   }

@@ -1,24 +1,24 @@
 
 import 'package:flutter/material.dart';
-
-
 import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // Navigate to HomeScreen after 3 seconds
-    Future.delayed(Duration(seconds: 3), () {
-      // Navigate using GoRouter
-      context.go('/home'); // Adjust this path according to your router setup
+ 
+    Future.delayed(const Duration(seconds: 3), () {
+
+      context.go('/home'); 
     });
 
     return Scaffold(
       backgroundColor: Colors.orange, 
       body: Center(
         child: Image.asset(
-          'assets/Frame 7.png', // Replace with your image asset path
-          fit: BoxFit.contain, // Adjust the fit as needed
+          'assets/Frame 7.png',
+          fit: BoxFit.contain, 
         ),
       ),
     );

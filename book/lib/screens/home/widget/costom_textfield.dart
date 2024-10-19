@@ -25,11 +25,11 @@ class CustomTextField extends StatelessWidget {
         prefixIcon: icon != null ? Icon(icon) : null,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
-          borderSide: BorderSide(color: Colors.black),
+          borderSide: const BorderSide(color: Colors.black),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.0),
-          borderSide: BorderSide(color: Colors.black, width: 2),
+          borderSide: const BorderSide(color: Colors.black, width: 2),
         ),
         filled: true,
         fillColor: Colors.grey[200],
